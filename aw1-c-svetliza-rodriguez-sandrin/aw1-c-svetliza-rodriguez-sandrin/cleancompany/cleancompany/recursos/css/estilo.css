@@ -1,0 +1,527 @@
+/*para la fuente de la letra, es roboto*/
+@font-face {
+    font-family: "Roboto";
+    src: 
+        local("Roboto"),
+        url("fonts/Roboto-Regular.ttf");
+}
+/*para que todo use roboto, con color 333 y tamano 18 */
+:root{
+    font-family: "Roboto";
+    color: #333;
+    size: 18px;
+    background-color: #F5F5F5;
+    --color-principal:#ed1c22;
+    --color-fondo: #ffffff;
+    --color-secundario:rgba(211, 211, 211, 0.5);
+}
+/*tambien para todo */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+}
+  
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 15px; 
+    font-size: 16px; 
+}
+
+li{
+    padding: 5px;
+    font-size: 18px;
+    font-weight: normal;
+}
+/* index */
+/*para los encabezados*/
+.encabezado{
+    background-color: var(--color-principal);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+/*para las imagenes de los encabezados*/
+.encabezado img{
+    width: 50%;
+    height: auto;
+    padding: 7px 5px;
+    border-radius: 50%;
+}
+/*para los enlaces, seria el inicio, catergoria y contacto*/
+.encabezado nav{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.encabezado a:hover{
+    transform: scale(1.1);
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Cambia el cursor a mano */
+    background-color: transparent; /* Cambia el color de fondo */
+}
+/*para los a, le cambia el diseno, la distancia entre ellos y el color*/
+a{
+    text-decoration: none;
+    margin-right: 7px;
+    color: #ffffff;
+}
+
+/* Ajuste del enlace de "Categoría" */
+.categoria-link {
+    position: relative;
+    padding-bottom: 5px;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    display: none; /* Ocultamos el menú por defecto */
+    position: absolute;
+    top: 100%; /* Posicionamos el menú debajo del enlace */
+    left: 0;
+    background-color: var(--color-fondo);/* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle efecto */
+    border: 1px solid #ddd; /* Borde */
+    padding: 10px ; /* Espaciado interno */
+    z-index: 999; /* Aseguramos que esté encima de otros elementos */
+    list-style: none; /* Quitamos los puntos de la lista */
+    width: 200px; /* Ancho del menú desplegable */
+}
+
+.dropdown-menu li {
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.dropdown-menu li a {
+    text-decoration: none; /* Quitamos el subrayado */
+    color: #333; /* Color del texto */
+    display: block; /* Enlace como bloque para ser clickeable en toda su área */
+}
+
+/* Mostrar menú desplegable al pasar el cursor */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Mostramos el menú */
+}
+
+/* Efecto visual al pasar el cursor por los enlaces del menú */
+.dropdown-menu li:hover {
+    background-color: var(--color-secundario); /* Fondo más claro */
+}
+
+.carro-compras {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 60px; /* Ajusta el ancho si es necesario */
+    justify-content: right;
+    position: relative;   
+}
+.carro-compras img {
+    width: 50px; 
+    height: auto; 
+}
+.carro-compras__boton {
+   background-color: transparent;
+   border:none;
+   cursor:pointer;
+   width: 40px;
+   height: auto;
+   justify-content: center;  /* Centra la imagen dentro del botón */
+   align-items: center;   
+}
+
+dialog form{
+    width:100%;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+}
+dialog form > button{
+    background-color: transparent;
+    border:none;
+}
+dialog.popup-carro{
+    position:fixed;
+    margin:0;
+    inset: unset;
+    right:0;
+    bottom:0;
+    top:0;
+    width:50%;
+    min-width: 400px;
+    min-height:100dvh;
+    border:none;
+}
+/*BODY*/
+
+/*le saca a los ul las lineas, le cambia el tamano, hace que el ul este en negrita*/
+ul{
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+video{
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    width: 100vw;
+    height: 30vw;
+    object-fit: cover;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+}
+
+/*en los productos no entiendo porque los manda a la derecha*/
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productos article:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Cambia el cursor a mano */
+    background-color: #f0f0f0; /* Cambia el color de fondo */
+}
+.productos__boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1rem;
+    padding-block: 10px;
+    padding-inline: 15px;
+    margin-block-start: 15px;
+    cursor: pointer;
+}
+
+article{   
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 10px;
+    height: 5%;
+    width: 25%;
+}
+
+.imgart{
+    width: 400% ;
+    height: auto;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+    width: 100%;  
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 30px;
+}
+
+.ubicacion p{
+    padding: 30px;
+}
+
+.mapa{
+    margin: 0;
+    width: 70%; 
+    height: auto;
+}
+
+/*FOOTER*/
+footer{
+    background-color: var(--color-principal);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fimg{
+    width: 10%;
+    padding: 7px 5px;
+    border-radius: 50%;
+}
+footer ul{
+    list-style: none; /* Elimina los estilos de lista predeterminados */
+    padding: 0;
+    margin: 10px ;
+    text-align: center; /* Centra el texto dentro de las listas */
+    
+}
+.recursos{
+    width: 5%;
+    padding: 4px;
+}
+
+/* CONTACTO */
+
+.contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    /*height: 100vh;*/
+    height: 500px; 
+    background-color: var(--color-secundario);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0 , 0.1);
+    width: 100%;
+    height: 500px;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea{
+    width: 100%;
+    padding: 48px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    width: 20%;
+    padding: 8px;
+    font-weight: bold;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*CATEGORIA*/
+.secciones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 500px; 
+    background-color: var(--color-secundario);
+}
+
+.secciones li:hover {
+    transform: scale(1.1);
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Cambia el cursor a mano */
+    background-color: transparent; /* Cambia el color de fondo */
+}
+
+.secciones ul{
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    
+}
+
+.secciones li{
+    padding: 5px;
+    font-size: 18px;
+}
+
+.secciones a{
+    text-decoration: none;
+    color: #000000;
+    
+}
+
+.categoria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 7px;
+    width: 80%;
+    height: 500%; 
+}
+  
+@media screen and (min-width: 1024px){
+    .encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 20px;
+        display: flex;
+        padding: 5px;
+    }
+
+    .encabezado img {
+        width: 15%;
+        height: auto;
+        padding: 7px 5px;
+        border-radius: 50%;
+    }
+
+    .nav a {
+        margin: 10px 10px;
+        font-size: 16px;
+    }
+    
+    .contenido {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        max-width: 100%;
+    }
+    .carro-compras {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        width: 60px; /* Ajusta el ancho si es necesario */
+        justify-content: right;
+        position: relative;   
+    }
+    .carro-compras img {
+        width: 50px; 
+        height: auto; 
+    }
+    .carro-compras__boton {
+       background-color: transparent;
+       border:none;
+       cursor:pointer;
+       width: 40px;
+       height: auto;
+       justify-content: center;  /* Centra la imagen dentro del botón */
+       align-items: center;   
+    }
+    .productos {
+        flex-direction: row;  /* Cambia de columna a fila en pantallas grandes */
+        flex-wrap: wrap;
+        justify-content: flex-start;  /* Alinea los artículos al inicio */
+        gap: 30px;  /* Aumenta el espacio entre los artículos */
+    }
+
+    .productos__boton {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: inherit;
+        font-family: inherit;
+        font-size: 1rem;
+        padding-block: 10px;
+        padding-inline: 15px;
+        margin-block-start: 15px;
+        cursor: pointer;
+    }
+
+    .productos__boton img{
+        width: 200% !important ;
+        height: auto;
+    }
+
+    .productos article {
+        width: 250px;  /* Ajusta el tamaño del artículo */
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ddd; /* Borde opcional */
+    }
+
+    .productos img {
+        width: 80%;  /* Ajusta el tamaño de la imagen, puedes cambiar el porcentaje */
+        height: auto;
+        object-fit: cover;  /* Ajusta la imagen para que cubra el área sin distorsionarse */
+        margin-bottom: 15px;  /* Espacio inferior para separar la imagen del texto */
+    }
+
+    .productos h4 {
+        font-size: 14px;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        padding: auto;
+    }
+
+    .ubicacion, .mapa {
+        padding: 10px;
+    }
+
+    .mapa  {
+        width: 150%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    footer {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        font-style: none;
+        justify-content: space-between;
+    }
+
+    footer ul {
+        margin-bottom: 20px;
+    }
+
+    footer img.fimg {
+        height: 10%;
+        width: 10%;
+    }
+
+    .recursos {
+        width: 25px;
+    }
+    
+    .sidebar {
+       margin: 15px;
+       font-size: 10px ;
+    }
+}
