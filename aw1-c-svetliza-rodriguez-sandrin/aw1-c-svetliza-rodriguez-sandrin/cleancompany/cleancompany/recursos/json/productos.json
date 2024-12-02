@@ -49,5 +49,15 @@
             "imagen": "recursos/imagenes/esponja_platos.png",
             "precio": 300
         }
+    ],
+    "categorias": [
+        {
+        "inicio": [1, 2, 3, 4],
+        "articulos": [5, 2, 6, 7, 8, 3],
+        "cuidado": [1, 2],
+        "herramientas": [5, 8, 4],
+        "productoLimpieza": [7, 3],
+        "bolsas": [6]
+        }
     ]
 }
