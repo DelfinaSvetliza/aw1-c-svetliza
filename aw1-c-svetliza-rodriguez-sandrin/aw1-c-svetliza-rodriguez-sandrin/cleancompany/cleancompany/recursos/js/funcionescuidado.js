@@ -1,9 +1,4 @@
 export function renderizarProductos(_contenedor) {
-    // Levantar y leer un Json
-    // fetch('./recursos/datos/tienda.json')
-    // fetch('../datos/tienda.json')
-    // Asincronicidad
-
     // Solicito datos
     fetch('./recursos/json/productos.json')
         // Espero y luego convierto a objeto JS
@@ -79,7 +74,7 @@ function renderizado(arregloProductos, contenedor) {
                         src="./recursos/imagenes/carrito.png"
                         alt="Icono carrito compras"
                     />
-                            Agregar carrito
+                            
                         </button>
             </article>
         `

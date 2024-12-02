@@ -114,7 +114,7 @@ export function renderizarProductosCarro(_productos, _productosCarro, _contenedo
                         src="./recursos/imagenes/carrito.png"
                         alt="Icono carrito compras"
                     />
-                            Agregar carrito
+                            
                         </button>
             </article>
         `

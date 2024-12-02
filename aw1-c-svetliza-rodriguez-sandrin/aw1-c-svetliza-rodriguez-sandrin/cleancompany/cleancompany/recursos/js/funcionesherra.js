@@ -79,7 +79,7 @@ function renderizado(arregloProductos, contenedor) {
                         src="./recursos/imagenes/carrito.png"
                         alt="Icono carrito compras"
                     />
-                            Agregar carrito
+                           
                         </button>
             </article>
         `
