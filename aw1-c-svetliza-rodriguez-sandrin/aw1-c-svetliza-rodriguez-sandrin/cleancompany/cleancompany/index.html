@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +9,7 @@
     <script type="module" src="recursos/js/index.js"></script>
 </head>
 <body>
-    <dialog class="popup-carro" id="popup-carro" >
-        <form method="dialog">
-            <button>CERRAR</button>
-        </form>
-        <h2>Productos</h2>
-        <section id="contenedor-carro">
-            No hay productos
-        </section>
-    </dialog>
+    
     <header class="encabezado">
         <a href="index.html">
             <img src="recursos/imagenes/cleancompany.png" alt="logo clean company" aria-label="logo clean company" class="img">
@@ -27,7 +19,7 @@
                 Inicio  
             </a>
             <div class="dropdown">
-                <a href="categoria.html" class="categoria-link">Categoría</a>
+                <a href="categoria.html" class="categoria-link">Productos</a>
                 <ul class="dropdown-menu">
                     <li><a href="bolsas.html">Bolsas</a></li>
                     <li><a href="cuidado_personal.html">Cuidado Personal</a></li>
@@ -40,6 +32,17 @@
             </a>
         </nav>
         <div class="carro-compras">
+            <dialog class="popup-carro" id="popup-carro" >
+                <form method="dialog">
+                    <button class="cerrar">X</button>
+                </form>
+                <h2>Productos</h2>
+                <section id="contenedor-carro">
+                    No hay productos
+                    <ul id="lista-productos"></ul>
+                    <p>Total: $<span id="total-precio">0</span></p>
+                </section>
+            </dialog>
             <button class="carro-compras__boton" id="abrir-popup-carro" aria-label="Abrir diálogo">
                 <img
                 src="./recursos/imagenes/carrito.png"
@@ -48,7 +51,7 @@
             </button>
             <span id="carro-contidad-items" >0</span>
         </div>
-            
+       
         
     </header>
     <main class="contenido">
