@@ -1,7 +1,7 @@
 import { renderizado, renderizarProductosCarro } from "./funciones.js";
 
 // Obtén los datos y realiza el renderizado
-const contenedor = document.getElementById("contenedor-herramienta");
+const contenedor = document.getElementById("contenedor-herramientas");
 let productosEnCarro = JSON.parse(localStorage.getItem("carro")) || [];
 
 function actualizarCarrito(productos) {
