@@ -30,15 +30,6 @@
                 Contacto
             </a>
         </nav>
-        <div class="carro-compras">
-            <button class="carro-compras__boton" id="abrir-popup-carro" aria-label="Abrir diálogo">
-                <img
-                src="./recursos/imagenes/carrito.png"
-                alt="Icono carrito compras"
-                />
-            </button>
-            <span id="carro-contidad-items" >0</span>
-        </div>
     </header>
     <main>
         <div class="contacto">
@@ -77,10 +68,9 @@
                 </label>
                 <br>
                 <label for="id-mensaje">
-                    <textarea name="mensaje" id="id-mensaje" placeholder="Mensaje..." required>
-                        Deje un mensaje
-                    </textarea>
+                    Mensaje
                 </label>
+                <textarea name="mensaje" id="id-mensaje" placeholder="Mensaje..." required class="area-texto"></textarea>
                 <br>
                 <button aria-label="boton para enviar datos" class="boton-contacto">
                     Enviar
