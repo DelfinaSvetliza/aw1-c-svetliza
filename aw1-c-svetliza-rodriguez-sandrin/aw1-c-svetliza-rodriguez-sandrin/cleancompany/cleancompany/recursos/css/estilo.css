@@ -75,7 +75,17 @@ article{
     height: 5%;
     width: 25%;
 }
-
+.producto article{
+    width: 250px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-content: center;
+    border: 1px solid #ddd;
+    background-color: var(--color-fondo);
+    box-sizing: border-box;
+}
 .nav {
     display: flex;
     justify-content: end;
@@ -178,7 +188,6 @@ li{
    justify-content: center;  
    align-items: center;   
 }
-
 .popup {
     position: fixed;
     top: 50%;
@@ -248,7 +257,7 @@ li{
 }
 .mapa{
     margin: 0;
-    width: 70%; 
+    width: 50%; 
     height: auto;
 }
 /*FOOTER*/
@@ -434,13 +443,11 @@ input{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid #ddd; 
+
     }
     .productos article:hover {
         transform: scale(1.1);
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
         cursor: var(--cursor); 
-        background-color: #f0f0f0;
     }
     .productos img {
         width: 80%;  
@@ -460,7 +467,7 @@ input{
         padding: 10px;
     }
     .mapa  {
-        width: 150%;
+        width: 100%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -485,8 +492,5 @@ input{
     .recursos {
         width: 25px;
     }   
-    .sidebar {
-       margin: 15px;
-       font-size: 10px ;
-    }
+   
 }

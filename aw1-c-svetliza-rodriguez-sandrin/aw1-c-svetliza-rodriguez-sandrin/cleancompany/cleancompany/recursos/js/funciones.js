@@ -1,5 +1,3 @@
-// funciones.js
-
 // Renderiza los productos según la categoría
 export function renderizado(datos, categoriaNombre, contenedor) {
     const productos = datos.productos;
@@ -78,7 +76,7 @@ export function eliminarProducto(idProducto, productos, productosCarro, contened
         localStorage.setItem("carro", JSON.stringify(productosCarro));
 
         renderizarProductosCarro(productos, productosCarro, contenedor);
-        actualizarContadorCarro(productosCarro); // Actualiza el contador
+        actualizarContadorCarro(productosCarro); 
     }
 }
 
